@@ -1,0 +1,6266 @@
+{
+ "image_count": {
+  "cilium": {
+   "quay.io/cilium/cilium:v1.16.0@sha256:46ffa4ef3cf6d8885dcc4af5963b0683f7d59daa90d49ed9fb68d3b1627fe058": 1
+  },
+  "cilium-envoy": {
+   "quay.io/cilium/cilium-envoy:v1.29.7-39a2a56bbd5b3a591f69dbca51d3e30ef97e0e51@sha256:bd5ff8c66716080028f414ec1cb4f7dc66f40d2fb5a009fff187f4a9b90b566b": 1
+  },
+  "cilium-operator": {
+   "quay.io/cilium/operator-generic:v1.16.0@sha256:d6621c11c4e4943bf2998af7febe05be5ed6fdcf812b27ad4388f47022190316": 1
+  },
+  "clustermesh-apiserver": {
+   "quay.io/cilium/clustermesh-apiserver:v1.16.0@sha256:a1597b7de97cfa03f1330e6b784df1721eb69494cd9efb0b3a6930680dfe7a8e": 3
+  }
+ },
+ "phase_count": {
+  "cilium": {
+   "Running": 1
+  },
+  "cilium-envoy": {
+   "Running": 1
+  },
+  "cilium-operator": {
+   "Running": 1
+  },
+  "clustermesh-apiserver": {
+   "Running": 1
+  }
+ },
+ "pod_state": {
+  "cilium": {
+   "Type": "DaemonSet",
+   "Desired": 1,
+   "Ready": 1,
+   "Available": 1,
+   "Unavailable": 0
+  },
+  "cilium-envoy": {
+   "Type": "DaemonSet",
+   "Desired": 1,
+   "Ready": 1,
+   "Available": 1,
+   "Unavailable": 0
+  },
+  "cilium-operator": {
+   "Type": "Deployment",
+   "Desired": 1,
+   "Ready": 1,
+   "Available": 1,
+   "Unavailable": 0
+  },
+  "clustermesh-apiserver": {
+   "Type": "Deployment",
+   "Desired": 1,
+   "Ready": 1,
+   "Available": 1,
+   "Unavailable": 0
+  }
+ },
+ "pods_count": {
+  "all": 3,
+  "by_cilium": 3
+ },
+ "cilium_status": {
+  "cilium-hz4hn": {
+   "attach-mode": "tc",
+   "auth-certificate-provider": {
+    "state": "Disabled"
+   },
+   "bandwidth-manager": {
+    "devices": null
+   },
+   "bpf-maps": {
+    "dynamic-size-ratio": 0.0025,
+    "maps": [
+     {
+      "name": "Auth",
+      "size": 524288
+     },
+     {
+      "name": "Non-TCP connection tracking",
+      "size": 65536
+     },
+     {
+      "name": "TCP connection tracking",
+      "size": 131072
+     },
+     {
+      "name": "Endpoint policy",
+      "size": 65535
+     },
+     {
+      "name": "IP cache",
+      "size": 512000
+     },
+     {
+      "name": "IPv4 masquerading agent",
+      "size": 16384
+     },
+     {
+      "name": "IPv6 masquerading agent",
+      "size": 16384
+     },
+     {
+      "name": "IPv4 fragmentation",
+      "size": 8192
+     },
+     {
+      "name": "IPv4 service",
+      "size": 65536
+     },
+     {
+      "name": "IPv6 service",
+      "size": 65536
+     },
+     {
+      "name": "IPv4 service backend",
+      "size": 65536
+     },
+     {
+      "name": "IPv6 service backend",
+      "size": 65536
+     },
+     {
+      "name": "IPv4 service reverse NAT",
+      "size": 65536
+     },
+     {
+      "name": "IPv6 service reverse NAT",
+      "size": 65536
+     },
+     {
+      "name": "Metrics",
+      "size": 1024
+     },
+     {
+      "name": "NAT",
+      "size": 131072
+     },
+     {
+      "name": "Neighbor table",
+      "size": 131072
+     },
+     {
+      "name": "Global policy",
+      "size": 16384
+     },
+     {
+      "name": "Session affinity",
+      "size": 65536
+     },
+     {
+      "name": "Sock reverse NAT",
+      "size": 65536
+     },
+     {
+      "name": "Tunnel",
+      "size": 65536
+     }
+    ]
+   },
+   "cilium": {
+    "msg": "1.16.0 (v1.16.0-82999990)",
+    "state": "Ok"
+   },
+   "clock-source": {
+    "mode": "ktime"
+   },
+   "cluster": {
+    "ciliumHealth": {
+     "state": "Ok"
+    },
+    "nodes": null,
+    "self": "cmesh100/ip-172-31-201-30.eu-west-3.compute.internal"
+   },
+   "cluster-mesh": {
+    "clusters": [
+     {
+      "config": {
+       "cluster-id": 1,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh1",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 10,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh10",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 101,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh101",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 102,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh102",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 103,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh103",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 104,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh104",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 105,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh105",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 106,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh106",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 107,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh107",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 108,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh108",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 109,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh109",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 11,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh11",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 110,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh110",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 111,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh111",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 112,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh112",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 113,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh113",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 114,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh114",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 115,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh115",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 116,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh116",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 117,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh117",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 118,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh118",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 119,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh119",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 12,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh12",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 120,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh120",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 121,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh121",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 122,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh122",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 123,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh123",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 124,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh124",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 125,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh125",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 126,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh126",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 127,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh127",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 128,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh128",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 13,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh13",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 14,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh14",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 15,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh15",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 16,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh16",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 17,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh17",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 18,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh18",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 19,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh19",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 2,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh2",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 20,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh20",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 21,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh21",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 22,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh22",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 23,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh23",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 24,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh24",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 25,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh25",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 26,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh26",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 27,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh27",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 28,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh28",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 29,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh29",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 3,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh3",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 30,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh30",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 31,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh31",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 32,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh32",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 33,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh33",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 34,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh34",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 35,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh35",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 36,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh36",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 37,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh37",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 38,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh38",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 39,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh39",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 4,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh4",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 40,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh40",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 41,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh41",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 42,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh42",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 43,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh43",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 44,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh44",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 45,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh45",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 46,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh46",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 47,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh47",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 48,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh48",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 49,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh49",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 5,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh5",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 50,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh50",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 51,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh51",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 52,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh52",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 53,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh53",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 54,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh54",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 55,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh55",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 56,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh56",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 57,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh57",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 58,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh58",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 59,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh59",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 6,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh6",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 60,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh60",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 61,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh61",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 62,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh62",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 63,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh63",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 64,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh64",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 65,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh65",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 66,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh66",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 67,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh67",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 68,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh68",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 69,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh69",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 7,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh7",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 70,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh70",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 71,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh71",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 72,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh72",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 73,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh73",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 74,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh74",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 75,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh75",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 76,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh76",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 77,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh77",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 78,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh78",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 79,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh79",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 8,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh8",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 80,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh80",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 81,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh81",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 82,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh82",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 83,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh83",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 84,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh84",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 85,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh85",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 86,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh86",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 87,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh87",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 88,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh88",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 89,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh89",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 9,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh9",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 90,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh90",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 91,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh91",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 92,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh92",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 93,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh93",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 94,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh94",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 95,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh95",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 96,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh96",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 97,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh97",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 98,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh98",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     },
+     {
+      "config": {
+       "cluster-id": 99,
+       "kvstoremesh": true,
+       "required": true,
+       "retrieved": true,
+       "sync-canaries": true
+      },
+      "connected": true,
+      "last-failure": "0001-01-01T00:00:00.000Z",
+      "name": "cmesh99",
+      "num-endpoints": 3,
+      "num-identities": 2,
+      "num-nodes": 1,
+      "ready": true,
+      "status": "etcd: 1/1 connected, leases=0, lock leases=1, has-quorum=true: endpoint status checks are disabled, ID: 5c654da506d51ab3",
+      "synced": {
+       "endpoints": true,
+       "identities": true,
+       "nodes": true,
+       "services": true
+      }
+     }
+    ]
+   },
+   "cni-chaining": {
+    "mode": "none"
+   },
+   "cni-file": {
+    "msg": "successfully wrote CNI configuration file to /host/etc/cni/net.d/05-cilium.conflist",
+    "state": "Ok"
+   },
+   "controllers": [
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh2",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "65479cb3-a5ff-463d-9f93-e5453b0edf45"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "1m0s"
+     },
+     "name": "dns-garbage-collector-job",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:19.312Z",
+      "success-count": 12
+     },
+     "uuid": "366a5a73-02ea-479d-af37-7f4943885a50"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh54",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "5ea22063-b15a-408c-8a64-00f18897a6c9"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh68",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "62c13c3b-d39b-41b5-8d85-1a9d69c88ca0"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh75",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "f12116f5-028a-4784-9763-15b756e99ecf"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh70",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.483Z",
+      "success-count": 1
+     },
+     "uuid": "4c75698a-3e4b-4603-bf40-5e4da0e8c4a0"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "15s"
+     },
+     "name": "link-cache",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:36.935Z",
+      "success-count": 46
+     },
+     "uuid": "65854041-1128-4ece-8b4e-5b72e4016856"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh13",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.548Z",
+      "success-count": 1
+     },
+     "uuid": "5b0abc9d-33e9-4b69-8f4b-555e65e94db0"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh15",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "2f5a34b6-f2f4-4b0a-bcd6-d48275295bb5"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh6",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "f348b908-6924-4872-b6aa-cb37a6d8d532"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh22",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.550Z",
+      "success-count": 1
+     },
+     "uuid": "f12d5859-2b32-42d9-9493-6ecde6c7d45e"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh88",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "e01f2ee6-4b29-43cf-b530-a12bd08aa25c"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh37",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "9aa0b0b0-2f8d-444e-8ebc-91bdd70f8ac9"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh43",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "bae58824-fc20-457d-9117-c5bc63d68017"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh105",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "eee2ce18-6f62-486d-9b68-1804d7de70d9"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh69",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "4733c4aa-e728-4e51-85f6-fd3c66536484"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh115",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "5c5c0122-1cac-4113-b23e-43f07311633d"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh33",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.550Z",
+      "success-count": 1
+     },
+     "uuid": "7b02b284-3075-4d6b-997a-0b3cdfe685dd"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh127",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "b6db7229-f789-47ca-9e3c-a6440d0a0a5c"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh56",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "09673215-b06e-45bb-a5f1-bd60c7eb8145"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh41",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.558Z",
+      "success-count": 1
+     },
+     "uuid": "f652d124-ac7a-458e-bdd7-19e46754f131"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh109",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.560Z",
+      "success-count": 1
+     },
+     "uuid": "c15192e5-4c8f-4e07-850e-b7005ca1e61f"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh97",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "c3000128-d028-4203-ad14-728f9a428883"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "5m0s"
+     },
+     "name": "resolve-identity-27",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:27:23.675Z",
+      "success-count": 3
+     },
+     "uuid": "9f0ea50e-bd56-476a-b3af-055a89f6d7e9"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh31",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.396Z",
+      "success-count": 1
+     },
+     "uuid": "acecacd4-05a7-4c7e-881a-4dc85fffcf5c"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh63",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.396Z",
+      "success-count": 1
+     },
+     "uuid": "d1ce9a2e-80db-4502-9d9f-ede13774695e"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "5m0s"
+     },
+     "name": "resolve-identity-1346",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:26:28.084Z",
+      "success-count": 2
+     },
+     "uuid": "ffe4ead9-fc01-4ded-b814-517d122e9e44"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh60",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "84f5573c-3b90-4a5a-8c7c-26ddb5eab3ef"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh91",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "f8b14b43-b86c-4d0a-acd7-f31ac09f321b"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "error-retry-base": "2s"
+     },
+     "name": "endpoint-1927-regeneration-recovery",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "0001-01-01T00:00:00.000Z"
+     },
+     "uuid": "766a75c8-5ed6-43f1-97a0-27bb2f64a286"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh32",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.491Z",
+      "success-count": 1
+     },
+     "uuid": "26d8b632-1794-471b-8f59-f0beef4a231c"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh42",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "c8eb5123-17f2-40ad-8ca9-51f2d252954b"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh23",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "44ebb079-9286-4cfb-81a4-c6a55b654293"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh67",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.493Z",
+      "success-count": 1
+     },
+     "uuid": "3f03ecc7-72b2-461e-852a-cb6a325090c5"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh79",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.557Z",
+      "success-count": 1
+     },
+     "uuid": "962da809-8123-4e2c-85c4-d33a8315f61c"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh120",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.396Z",
+      "success-count": 1
+     },
+     "uuid": "ec2258f6-7bfa-482a-b09b-4cd7005147de"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh30",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "9101b92e-331e-449a-8dba-61d6baf282df"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh123",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.571Z",
+      "success-count": 1
+     },
+     "uuid": "eb2232d7-9461-4d5b-8c9a-ba3de6bd787e"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh5",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "a4cf54c6-4c4c-4c01-868d-aea63a41885d"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh45",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "5850d45a-5116-45b6-a20f-48c691bac5be"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "15m0s"
+     },
+     "name": "sync-policymap-12",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:17:22.861Z",
+      "success-count": 1
+     },
+     "uuid": "598624e5-a347-40b5-8e37-56bfb0cc025b"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh40",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "334bf9dd-7ee9-4241-ae70-f837d6f41af8"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh81",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.488Z",
+      "success-count": 1
+     },
+     "uuid": "786c0693-08a7-4bb6-874c-0800cc9dee2f"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "30s"
+     },
+     "name": "k8s-heartbeat",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:18.947Z",
+      "success-count": 23
+     },
+     "uuid": "b5473f85-bae8-4a32-9c5d-42be3ba22720"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh98",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "e0bbc27a-cbdd-45ab-97cf-e33b540e373f"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh108",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "30feac0a-3db5-4b4a-b614-ab0cb090044c"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "error-retry-base": "10s"
+     },
+     "name": "write-cni-file",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:17:19.065Z",
+      "success-count": 4
+     },
+     "uuid": "75bd415d-354a-4f9f-b34d-8ec08e21fcb2"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "resolve-labels-kube-system/coredns-cc6ccd49c-lcdmg",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:17:23.750Z",
+      "success-count": 1
+     },
+     "uuid": "c488b8d5-3bcc-47ac-a0ca-891b40380e5c"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "5m0s"
+     },
+     "name": "endpoint-gc",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:27:19.143Z",
+      "success-count": 3
+     },
+     "uuid": "e044be7d-8b51-412c-9249-88fdb076c109"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh128",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "b1120cca-44be-469e-b5f9-f5bad1d71eef"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh58",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.550Z",
+      "success-count": 1
+     },
+     "uuid": "198810ef-e1dc-48dc-aaaf-17e975de0863"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh112",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.483Z",
+      "success-count": 1
+     },
+     "uuid": "1f7afaec-dd17-409c-8603-df4e4d793d3f"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh11",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "485e95a3-9e5d-4d0f-9075-8b93edde60be"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh104",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.492Z",
+      "success-count": 1
+     },
+     "uuid": "3825f71f-c761-416d-8812-d1acd8ad5d91"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh76",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "876a5024-e7b7-4266-9772-ad28cfd58387"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "30s"
+     },
+     "name": "ep-bpf-prog-watchdog",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:21.873Z",
+      "success-count": 23
+     },
+     "uuid": "93f44ab7-056e-4f3a-8506-d7f0d5ce3493"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh77",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "9abf0941-1119-4115-bb20-4e9840a74f26"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh110",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "21124508-5673-40b4-b93d-e4c08f587801"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "10s"
+     },
+     "name": "sync-to-k8s-ciliumendpoint (27)",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:33.735Z",
+      "success-count": 69
+     },
+     "uuid": "eb2c50b8-d03b-40b2-9336-00d18193fdea"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh18",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.550Z",
+      "success-count": 1
+     },
+     "uuid": "503441c2-bf98-4d79-afc0-e6761b782b0b"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh19",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.548Z",
+      "success-count": 1
+     },
+     "uuid": "e3d6e18c-4fb1-489a-9e1b-7645104cb727"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh52",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "c90c1c89-fdf0-48ae-ad74-aa27a9283bfe"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh117",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "abc8cf04-18e4-45f6-a4a7-3eef50a5aa72"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh118",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.491Z",
+      "success-count": 1
+     },
+     "uuid": "068bfe59-b791-4ccd-aa19-7138a31d47ea"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "local-identity-checkpoint",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:17:21.847Z",
+      "success-count": 1
+     },
+     "uuid": "cb752bd2-faef-4682-9de8-50d1f81925b1"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh48",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.594Z",
+      "success-count": 1
+     },
+     "uuid": "4f6130c4-cf36-49c2-8ef4-d7a01feaeb53"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh50",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "8ba67357-164b-4403-8f4e-3a87f8f3ad2f"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh85",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "0d7e1b86-406f-40da-aac1-9c0c247eb1e2"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh92",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.853Z",
+      "success-count": 1
+     },
+     "uuid": "e4d5445c-9477-4a0b-96af-656369907d28"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh9",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.492Z",
+      "success-count": 1
+     },
+     "uuid": "1ef93835-9dd7-4e86-9959-d2dbc29d4111"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "10s"
+     },
+     "name": "sync-to-k8s-ciliumendpoint (1927)",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:33.808Z",
+      "success-count": 69
+     },
+     "uuid": "a467d119-2ae5-4bf9-94ed-7faa28c06bfa"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh35",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "5479ba91-b00a-4142-82b6-17836566e954"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "15m0s"
+     },
+     "name": "sync-policymap-3741",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:17:25.896Z",
+      "success-count": 1
+     },
+     "uuid": "84d32d94-2399-4102-b929-700d449849b0"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh47",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.550Z",
+      "success-count": 1
+     },
+     "uuid": "7f38dca8-0702-442c-9e1c-08f15e34a40f"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh122",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "4fd7273c-abdb-49f5-8034-582c40dfdb23"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh8",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "b06c6624-879e-4292-82c1-f5ae85dcbbb5"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh39",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "42693469-23c6-4e34-99d0-767de41b3242"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "error-retry-base": "2s"
+     },
+     "name": "endpoint-12-regeneration-recovery",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "0001-01-01T00:00:00.000Z"
+     },
+     "uuid": "5c1c6181-a030-4082-83ad-c67fa32b9e0c"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh119",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "5e281c1a-863a-40fc-905d-6f6f8250af47"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh94",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.491Z",
+      "success-count": 1
+     },
+     "uuid": "baec580a-9c95-4637-9208-7511afe81188"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "error-retry-base": "2s"
+     },
+     "name": "endpoint-1346-regeneration-recovery",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "0001-01-01T00:00:00.000Z"
+     },
+     "uuid": "66bcb3b9-9fdd-4188-b437-5d9e2223608c"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh12",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "4815cc68-b309-4ab8-9175-6543d937fdd0"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh53",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.130Z",
+      "success-count": 1
+     },
+     "uuid": "6fcfd3e9-3762-4fee-8c6d-42590bba7a60"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh99",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "0e3d7748-5191-4353-b7cc-9f6c73fb92eb"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh111",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.648Z",
+      "success-count": 1
+     },
+     "uuid": "7ed84449-34da-4604-9445-d3d1e4a549e2"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh107",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.550Z",
+      "success-count": 1
+     },
+     "uuid": "2735eebf-f80d-425f-8018-45396c650a9e"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "5m0s"
+     },
+     "name": "resolve-identity-1927",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:27:23.764Z",
+      "success-count": 3
+     },
+     "uuid": "47674053-05f0-46b2-8dc6-f8c6ab9e1905"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh72",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.548Z",
+      "success-count": 1
+     },
+     "uuid": "039fe54c-52de-448b-aff6-905f0947d45e"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "15m0s"
+     },
+     "name": "sync-policymap-27",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:17:25.891Z",
+      "success-count": 1
+     },
+     "uuid": "02935de8-2465-452f-8d96-cbcb4206f610"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh65",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.492Z",
+      "success-count": 1
+     },
+     "uuid": "632aed7b-26d0-4adb-911f-bedae6a3f611"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh121",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.582Z",
+      "success-count": 1
+     },
+     "uuid": "ccab3d60-9575-498e-bd41-c5f4b70dac97"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh62",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.483Z",
+      "success-count": 1
+     },
+     "uuid": "e090813b-7222-4773-8ce5-f5bcb26583c3"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh64",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "1dcb23ff-7de2-438f-9395-97c1dab7a76d"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh21",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.384Z",
+      "success-count": 1
+     },
+     "uuid": "2ad78f18-ab10-4c3c-8032-9c7d411ecc23"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh113",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.493Z",
+      "success-count": 1
+     },
+     "uuid": "c2275b64-a854-42ce-a259-8024240bef49"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh38",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.482Z",
+      "success-count": 1
+     },
+     "uuid": "3b3436a0-3aa3-46dc-9985-a413fe707317"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "5m0s"
+     },
+     "name": "resolve-identity-12",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:27:21.852Z",
+      "success-count": 3
+     },
+     "uuid": "63bb4b7c-a382-4191-bbab-8d2c88259a42"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "sync-lb-maps-with-k8s-services",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:17:21.848Z",
+      "success-count": 2
+     },
+     "uuid": "7894c593-9ff1-435a-9837-4a1406d7ef21"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh24",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.488Z",
+      "success-count": 1
+     },
+     "uuid": "c083c54a-bc49-4d8f-ad39-6459f919969d"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh55",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.550Z",
+      "success-count": 1
+     },
+     "uuid": "6fc796a8-10ce-4d89-8a9a-61a9351fee58"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh124",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.488Z",
+      "success-count": 1
+     },
+     "uuid": "e8d38dc3-6c4e-4563-b679-49754d314c79"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh83",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.493Z",
+      "success-count": 1
+     },
+     "uuid": "5310208a-acb4-4619-ba42-b521210a6aa4"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "10s"
+     },
+     "name": "node-neighbor-link-updater",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:31.906Z",
+      "success-count": 68
+     },
+     "uuid": "03198e75-fe10-4809-af9a-2ec087443bae"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "1m0s"
+     },
+     "name": "sync-utime",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:21.560Z",
+      "success-count": 12
+     },
+     "uuid": "e71ab544-e305-4d12-b6b6-2681fb2d11ff"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh46",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.564Z",
+      "success-count": 1
+     },
+     "uuid": "bd5b7006-a894-43e0-b57c-16f7ec14424d"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "error-retry-base": "2s"
+     },
+     "name": "endpoint-3741-regeneration-recovery",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "0001-01-01T00:00:00.000Z"
+     },
+     "uuid": "7357c588-80e5-4a5f-b624-c43d98472053"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh114",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "9dd74a6e-20ba-486f-89c7-85bb77a7101c"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "5m0s"
+     },
+     "name": "resolve-identity-3741",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:27:22.906Z",
+      "success-count": 3
+     },
+     "uuid": "14661c1d-9b8b-439f-b333-fc07171382d6"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh17",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.491Z",
+      "success-count": 1
+     },
+     "uuid": "34525ff7-e196-45ba-8219-fc48251004cb"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh66",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.570Z",
+      "success-count": 1
+     },
+     "uuid": "504525ca-7901-474b-8384-e1df8181a465"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh61",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.483Z",
+      "success-count": 1
+     },
+     "uuid": "e0d7aee3-8d15-4cb5-bc0e-214881b0ffe2"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh4",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.492Z",
+      "success-count": 1
+     },
+     "uuid": "28cf6c19-f0c0-4ece-83f4-e3dbe4831335"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh82",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.568Z",
+      "success-count": 1
+     },
+     "uuid": "41d5c528-5b23-4415-8f21-cac89475ed55"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh28",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "2ff4a07f-4820-44d5-82a9-1721b2620c4b"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh106",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.483Z",
+      "success-count": 1
+     },
+     "uuid": "73c4fb9b-1912-410b-96ac-debe91f4f6fc"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh87",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.396Z",
+      "success-count": 1
+     },
+     "uuid": "cc1fdfce-dce2-441f-9c2b-7bfeea160bf8"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh16",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "2019120a-6050-4492-875a-5e5c13648d5e"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh27",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "b2059c6a-c008-47d2-9c5d-3996258161c0"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "30s"
+     },
+     "name": "ct-map-pressure",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:21.879Z",
+      "success-count": 23
+     },
+     "uuid": "03b2534d-9cbb-4429-bf3a-7d3e67dc686b"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh78",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.486Z",
+      "success-count": 1
+     },
+     "uuid": "18e755c3-e77e-477e-89d8-1bb7c2c6a748"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh73",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "5602fd8c-c5ba-4280-98ab-8b0dd651f55a"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh3",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.567Z",
+      "success-count": 1
+     },
+     "uuid": "a487b393-9fec-4a7a-8413-7a11f257988e"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh86",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.582Z",
+      "success-count": 1
+     },
+     "uuid": "ec45252a-8eb8-4203-9afb-b6baf91dec25"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh29",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.547Z",
+      "success-count": 1
+     },
+     "uuid": "9a5683d7-0f79-46e7-acbf-481920cc01d1"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "error-retry-base": "2s"
+     },
+     "name": "endpoint-27-regeneration-recovery",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "0001-01-01T00:00:00.000Z"
+     },
+     "uuid": "a3ded7b2-0366-433c-9db0-2e2fd3811ac5"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh57",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.546Z",
+      "success-count": 1
+     },
+     "uuid": "9e32b1ba-d302-4692-b96b-efd589ac2972"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh49",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.396Z",
+      "success-count": 1
+     },
+     "uuid": "f9261924-3f69-4534-afcc-121d8f795782"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh89",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.413Z",
+      "success-count": 1
+     },
+     "uuid": "61da3770-565c-4efc-a2a8-993af08a8aa1"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh71",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "472efc41-6067-4c00-8364-b71d88951e09"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh34",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.572Z",
+      "success-count": 1
+     },
+     "uuid": "1ef3d948-f573-4e7d-a2d9-2182a5e8b40d"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh84",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "a83a255d-c06d-491e-8b31-5d7e66aa2ac9"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh7",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "ccf743dd-08d4-4ddf-8c93-341ce062fbfa"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh103",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.554Z",
+      "success-count": 1
+     },
+     "uuid": "26fa8bbe-e08e-494e-9196-f869b09284f4"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh25",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.493Z",
+      "success-count": 1
+     },
+     "uuid": "4514e58b-b711-4d1a-8602-68d787f7a593"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh26",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.483Z",
+      "success-count": 1
+     },
+     "uuid": "58287509-0d47-4a7e-af72-1cec48addb0f"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "15m0s"
+     },
+     "name": "sync-policymap-1346",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:21:28.116Z",
+      "success-count": 1
+     },
+     "uuid": "bbaf76d1-439a-4434-996e-83e2d54b9069"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh20",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.493Z",
+      "success-count": 1
+     },
+     "uuid": "7a0e1d65-5330-4923-92e2-2f78a4ae62fa"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "1m1s"
+     },
+     "name": "daemon-validate-config",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:32.873Z",
+      "success-count": 12
+     },
+     "uuid": "4d0d8bea-dcf0-4c31-a58a-0452f431196f"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh90",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.565Z",
+      "success-count": 1
+     },
+     "uuid": "d017c456-baff-4ca4-9c89-75b488bb187a"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh93",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.561Z",
+      "success-count": 1
+     },
+     "uuid": "d85aa909-d1d8-44df-9f7d-ead67cb4bf2e"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh74",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "16609806-955c-41d1-9346-b3634a94868e"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh102",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.126Z",
+      "success-count": 1
+     },
+     "uuid": "0d478493-40bd-4cdf-abc0-7bd21afd4176"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "15m0s"
+     },
+     "name": "sync-policymap-1927",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:17:25.960Z",
+      "success-count": 1
+     },
+     "uuid": "a5980aa9-72ba-41cc-a330-b01149a0fdeb"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh10",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "bb88a7f3-cad3-4cfc-a7aa-b3964a39015c"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh101",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.487Z",
+      "success-count": 1
+     },
+     "uuid": "cf588e9c-2309-4834-b3a1-7b39b4f4b297"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "resolve-labels-kube-system/coredns-cc6ccd49c-c65lk",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:17:23.672Z",
+      "success-count": 1
+     },
+     "uuid": "80bc9a37-f98c-4716-a5e4-7fc19690088b"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh44",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.658Z",
+      "success-count": 1
+     },
+     "uuid": "0d7081e4-eb9f-4cbd-ba49-9d8b11ea12a8"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "10s"
+     },
+     "name": "sync-to-k8s-ciliumendpoint (1346)",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:28.123Z",
+      "success-count": 44
+     },
+     "uuid": "3a0902b2-4304-4833-81c4-e8f4785700c9"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh36",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "f43334ab-9796-40de-9983-422d844a9796"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh96",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "ef60d4f1-1e31-43c2-b5ea-418245417ea0"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh51",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.439Z",
+      "success-count": 1
+     },
+     "uuid": "86939d1c-9128-44c7-b398-38d2c4cb74af"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh59",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.491Z",
+      "success-count": 1
+     },
+     "uuid": "1dcff953-ea99-4683-a62e-e8eb485c9301"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh125",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.130Z",
+      "success-count": 1
+     },
+     "uuid": "715cc856-366d-44d8-87bb-8c6617b2764e"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh116",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.132Z",
+      "success-count": 1
+     },
+     "uuid": "81fdcba9-52b8-447f-9ff7-279723f0c8dc"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh126",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.549Z",
+      "success-count": 1
+     },
+     "uuid": "a03da086-bf28-46db-9205-7b05bb17788b"
+    },
+    {
+     "configuration": {
+      "error-retry": true,
+      "interval": "1m0s"
+     },
+     "name": "cilium-health-ep",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:22.917Z",
+      "success-count": 12
+     },
+     "uuid": "85fb6f26-336f-4105-b863-8bb835f4bc0a"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "resolve-labels-kube-system/clustermesh-apiserver-77695dc8d7-ddsjl",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:21:28.082Z",
+      "success-count": 1
+     },
+     "uuid": "710c7eb8-7e78-4611-983d-0d1f2b6f98f9"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh80",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.441Z",
+      "success-count": 1
+     },
+     "uuid": "3e178980-c5f3-4bad-89e6-928bb1e05d95"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh14",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.479Z",
+      "success-count": 1
+     },
+     "uuid": "ab9bbf33-a61a-4a6e-91ed-c030aba1098f"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh1",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.486Z",
+      "success-count": 1
+     },
+     "uuid": "9f06df3d-412f-4824-bbaf-3a9737301535"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "remote-etcd-cmesh95",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:22:23.594Z",
+      "success-count": 1
+     },
+     "uuid": "61a4d684-d496-4b8c-9768-71592d4d3121"
+    },
+    {
+     "configuration": {
+      "error-retry": true
+     },
+     "name": "ipcache-inject-labels",
+     "status": {
+      "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+      "last-success-timestamp": "2024-10-25T10:28:21.547Z",
+      "success-count": 105
+     },
+     "uuid": "6aa58379-1e13-4216-adb8-2ce5fcf73133"
+    }
+   ],
+   "datapath-mode": "veth",
+   "encryption": {
+    "mode": "Disabled"
+   },
+   "host-firewall": {
+    "devices": [
+     "ens5"
+    ],
+    "mode": "Disabled"
+   },
+   "hubble": {
+    "metrics": {
+     "state": "Disabled"
+    },
+    "observer": {
+     "current-flows": 4095,
+     "max-flows": 4095,
+     "seen-flows": 55724,
+     "uptime": "11m15.130340124s"
+    },
+    "state": "Ok"
+   },
+   "identity-range": {
+    "max-identity": 6619135,
+    "min-identity": 6553600
+   },
+   "ipam": {
+    "allocations": {
+     "10.99.0.119": "kube-system/coredns-cc6ccd49c-lcdmg",
+     "10.99.0.170": "health",
+     "10.99.0.181": "kube-system/coredns-cc6ccd49c-c65lk",
+     "10.99.0.183": "kube-system/clustermesh-apiserver-77695dc8d7-ddsjl",
+     "10.99.0.78": "router"
+    },
+    "ipv4": [
+     "10.99.0.170",
+     "10.99.0.181",
+     "10.99.0.183",
+     "10.99.0.78",
+     "10.99.0.119"
+    ],
+    "ipv6": null,
+    "status": "IPv4: 5/254 allocated from 10.99.0.0/24, "
+   },
+   "ipv4-big-tcp": {
+    "maxGRO": 65536,
+    "maxGSO": 65536
+   },
+   "ipv6-big-tcp": {
+    "maxGRO": 65536,
+    "maxGSO": 65536
+   },
+   "kube-proxy-replacement": {
+    "deviceList": [
+     {
+      "ip": [
+       "",
+       "",
+       "172.31.201.30",
+       "fe80::86e:cdff:feda:66ed"
+      ],
+      "name": "ens5"
+     }
+    ],
+    "devices": [
+     "ens5"
+    ],
+    "directRoutingDevice": "ens5",
+    "features": {
+     "externalIPs": {},
+     "gracefulTermination": {
+      "enabled": true
+     },
+     "hostPort": {},
+     "nat46X64": {},
+     "nodePort": {},
+     "sessionAffinity": {},
+     "socketLB": {},
+     "socketLBTracing": {}
+    },
+    "mode": "False"
+   },
+   "kubernetes": {
+    "k8s-api-versions": [
+     "core/v1::Service",
+     "core/v1::Namespace",
+     "EndpointSliceOrEndpoint",
+     "core/v1::Pods",
+     "networking.k8s.io/v1::NetworkPolicy",
+     "cilium/v2::CiliumNetworkPolicy",
+     "cilium/v2::CiliumClusterwideNetworkPolicy",
+     "cilium/v2alpha1::CiliumCIDRGroup",
+     "cilium/v2::CiliumEndpoint",
+     "cilium/v2::CiliumNode"
+    ],
+    "msg": "1.30+ (v1.30.5-eks-ce1d5eb) [linux/amd64]",
+    "state": "Ok"
+   },
+   "kvstore": {
+    "msg": "Disabled",
+    "state": "Ok"
+   },
+   "masquerading": {
+    "enabled": true,
+    "enabledProtocols": {
+     "ipv4": true
+    },
+    "mode": "iptables",
+    "snat-exclusion-cidr": "10.99.0.0/24",
+    "snat-exclusion-cidr-v4": "10.99.0.0/24"
+   },
+   "nodeMonitor": {
+    "cpus": 2,
+    "npages": 64,
+    "pagesize": 4096
+   },
+   "proxy": {
+    "envoy-deployment-mode": "external",
+    "ip": "10.99.0.78",
+    "port-range": "10000-20000",
+    "redirects": null,
+    "total-ports": 1
+   },
+   "routing": {
+    "inter-host-routing-mode": "Tunnel",
+    "intra-host-routing-mode": "Legacy",
+    "tunnel-protocol": "vxlan"
+   },
+   "srv6": {
+    "srv6EncapMode": "reduced"
+   }
+  }
+ },
+ "cilium_endpoints": {
+  "cilium-hz4hn": [
+   {
+    "id": 12,
+    "spec": {
+     "label-configuration": {},
+     "options": {
+      "ConntrackAccounting": "Disabled",
+      "ConntrackLocal": "Disabled",
+      "Debug": "Disabled",
+      "DebugLB": "Disabled",
+      "DebugPolicy": "Disabled",
+      "DropNotification": "Enabled",
+      "MonitorAggregationLevel": "Medium",
+      "PolicyAccounting": "Enabled",
+      "PolicyAuditMode": "Disabled",
+      "PolicyVerdictNotification": "Enabled",
+      "SourceIPVerification": "Enabled",
+      "TraceNotification": "Enabled"
+     }
+    },
+    "status": {
+     "controllers": [
+      {
+       "configuration": {
+        "error-retry": true,
+        "error-retry-base": "2s"
+       },
+       "name": "endpoint-12-regeneration-recovery",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "0001-01-01T00:00:00.000Z"
+       },
+       "uuid": "5c1c6181-a030-4082-83ad-c67fa32b9e0c"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "5m0s"
+       },
+       "name": "resolve-identity-12",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:27:21.852Z",
+        "success-count": 3
+       },
+       "uuid": "63bb4b7c-a382-4191-bbab-8d2c88259a42"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "15m0s"
+       },
+       "name": "sync-policymap-12",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:17:22.861Z",
+        "success-count": 1
+       },
+       "uuid": "598624e5-a347-40b5-8e37-56bfb0cc025b"
+      }
+     ],
+     "external-identifiers": {
+      "pod-name": "/"
+     },
+     "health": {
+      "bpf": "OK",
+      "connected": true,
+      "overallHealth": "OK",
+      "policy": "OK"
+     },
+     "identity": {
+      "id": 1,
+      "labels": [
+       "reserved:host",
+       "k8s:node.kubernetes.io/instance-type=t4g.medium",
+       "k8s:topology.k8s.aws/zone-id=euw3-az2",
+       "k8s:topology.kubernetes.io/region=eu-west-3",
+       "k8s:topology.kubernetes.io/zone=eu-west-3b"
+      ]
+     },
+     "labels": {
+      "derived": [
+       "k8s:node.kubernetes.io/instance-type=t4g.medium",
+       "k8s:topology.k8s.aws/zone-id=euw3-az2",
+       "k8s:topology.kubernetes.io/region=eu-west-3",
+       "k8s:topology.kubernetes.io/zone=eu-west-3b",
+       "reserved:host"
+      ],
+      "realized": {},
+      "security-relevant": [
+       "k8s:node.kubernetes.io/instance-type=t4g.medium",
+       "k8s:topology.k8s.aws/zone-id=euw3-az2",
+       "k8s:topology.kubernetes.io/region=eu-west-3",
+       "k8s:topology.kubernetes.io/zone=eu-west-3b",
+       "reserved:host"
+      ]
+     },
+     "log": [
+      {
+       "code": "OK",
+       "message": "Successfully regenerated endpoint program (Reason: )",
+       "state": "ready",
+       "timestamp": "2024-10-25T10:22:25Z"
+      }
+     ],
+     "networking": {
+      "addressing": [
+       {}
+      ],
+      "host-mac": "5e:6b:37:a1:f6:64",
+      "interface-name": "cilium_host",
+      "mac": "5e:6b:37:a1:f6:64"
+     },
+     "policy": {
+      "proxy-statistics": [],
+      "realized": {
+       "allowed-egress-identities": [
+        0
+       ],
+       "allowed-ingress-identities": [
+        0
+       ],
+       "build": 1,
+       "denied-egress-identities": null,
+       "denied-ingress-identities": null,
+       "id": 1,
+       "l4": {
+        "egress": [],
+        "ingress": []
+       },
+       "policy-enabled": "none",
+       "policy-revision": 1
+      },
+      "spec": {
+       "allowed-egress-identities": [
+        0
+       ],
+       "allowed-ingress-identities": [
+        0
+       ],
+       "build": 1,
+       "denied-egress-identities": null,
+       "denied-ingress-identities": null,
+       "id": 1,
+       "l4": {
+        "egress": [],
+        "ingress": []
+       },
+       "policy-enabled": "none",
+       "policy-revision": 1
+      }
+     },
+     "realized": {
+      "label-configuration": {},
+      "options": {
+       "ConntrackAccounting": "Disabled",
+       "ConntrackLocal": "Disabled",
+       "Debug": "Disabled",
+       "DebugLB": "Disabled",
+       "DebugPolicy": "Disabled",
+       "DropNotification": "Enabled",
+       "MonitorAggregationLevel": "Medium",
+       "PolicyAccounting": "Enabled",
+       "PolicyAuditMode": "Disabled",
+       "PolicyVerdictNotification": "Enabled",
+       "SourceIPVerification": "Enabled",
+       "TraceNotification": "Enabled"
+      }
+     },
+     "state": "ready"
+    }
+   },
+   {
+    "id": 27,
+    "spec": {
+     "label-configuration": {},
+     "options": {
+      "ConntrackAccounting": "Disabled",
+      "ConntrackLocal": "Disabled",
+      "Debug": "Disabled",
+      "DebugLB": "Disabled",
+      "DebugPolicy": "Disabled",
+      "DropNotification": "Enabled",
+      "MonitorAggregationLevel": "Medium",
+      "PolicyAccounting": "Enabled",
+      "PolicyAuditMode": "Disabled",
+      "PolicyVerdictNotification": "Enabled",
+      "SourceIPVerification": "Enabled",
+      "TraceNotification": "Enabled"
+     }
+    },
+    "status": {
+     "controllers": [
+      {
+       "configuration": {
+        "error-retry": true,
+        "error-retry-base": "2s"
+       },
+       "name": "endpoint-27-regeneration-recovery",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "0001-01-01T00:00:00.000Z"
+       },
+       "uuid": "a3ded7b2-0366-433c-9db0-2e2fd3811ac5"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "5m0s"
+       },
+       "name": "resolve-identity-27",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:27:23.675Z",
+        "success-count": 3
+       },
+       "uuid": "9f0ea50e-bd56-476a-b3af-055a89f6d7e9"
+      },
+      {
+       "configuration": {
+        "error-retry": true
+       },
+       "name": "resolve-labels-kube-system/coredns-cc6ccd49c-c65lk",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:17:23.672Z",
+        "success-count": 1
+       },
+       "uuid": "80bc9a37-f98c-4716-a5e4-7fc19690088b"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "15m0s"
+       },
+       "name": "sync-policymap-27",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:17:25.891Z",
+        "success-count": 1
+       },
+       "uuid": "02935de8-2465-452f-8d96-cbcb4206f610"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "10s"
+       },
+       "name": "sync-to-k8s-ciliumendpoint (27)",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:28:33.735Z",
+        "success-count": 69
+       },
+       "uuid": "eb2c50b8-d03b-40b2-9336-00d18193fdea"
+      }
+     ],
+     "external-identifiers": {
+      "cni-attachment-id": "af141063dc8aba1fbe49c285d8dc2bcefce7971c7f5475029828716ae48190e4:eth0",
+      "container-id": "af141063dc8aba1fbe49c285d8dc2bcefce7971c7f5475029828716ae48190e4",
+      "k8s-namespace": "kube-system",
+      "k8s-pod-name": "coredns-cc6ccd49c-c65lk",
+      "pod-name": "kube-system/coredns-cc6ccd49c-c65lk"
+     },
+     "health": {
+      "bpf": "OK",
+      "connected": true,
+      "overallHealth": "OK",
+      "policy": "OK"
+     },
+     "identity": {
+      "id": 6572220,
+      "labels": [
+       "k8s:eks.amazonaws.com/component=coredns",
+       "k8s:io.cilium.k8s.namespace.labels.kubernetes.io/metadata.name=kube-system",
+       "k8s:io.cilium.k8s.policy.cluster=cmesh100",
+       "k8s:io.cilium.k8s.policy.serviceaccount=coredns",
+       "k8s:io.kubernetes.pod.namespace=kube-system",
+       "k8s:k8s-app=kube-dns"
+      ]
+     },
+     "labels": {
+      "derived": [
+       "k8s:pod-template-hash=cc6ccd49c"
+      ],
+      "realized": {},
+      "security-relevant": [
+       "k8s:eks.amazonaws.com/component=coredns",
+       "k8s:io.cilium.k8s.namespace.labels.kubernetes.io/metadata.name=kube-system",
+       "k8s:io.cilium.k8s.policy.cluster=cmesh100",
+       "k8s:io.cilium.k8s.policy.serviceaccount=coredns",
+       "k8s:io.kubernetes.pod.namespace=kube-system",
+       "k8s:k8s-app=kube-dns"
+      ]
+     },
+     "log": [
+      {
+       "code": "OK",
+       "message": "Successfully regenerated endpoint program (Reason: )",
+       "state": "ready",
+       "timestamp": "2024-10-25T10:22:25Z"
+      }
+     ],
+     "namedPorts": [
+      {
+       "name": "dns",
+       "port": 53,
+       "protocol": "UDP"
+      },
+      {
+       "name": "dns-tcp",
+       "port": 53,
+       "protocol": "TCP"
+      },
+      {
+       "name": "metrics",
+       "port": 9153,
+       "protocol": "TCP"
+      }
+     ],
+     "networking": {
+      "addressing": [
+       {
+        "ipv4": "10.99.0.181",
+        "ipv4-pool-name": "default"
+       }
+      ],
+      "container-interface-name": "eth0",
+      "host-mac": "92:68:a1:54:3b:1d",
+      "interface-index": 9,
+      "interface-name": "lxc4468fde50545",
+      "mac": "46:d2:d4:dd:5b:75"
+     },
+     "policy": {
+      "proxy-policy-revision": 1,
+      "proxy-statistics": [],
+      "realized": {
+       "allowed-egress-identities": [
+        0
+       ],
+       "allowed-ingress-identities": [
+        0,
+        1
+       ],
+       "build": 1,
+       "denied-egress-identities": null,
+       "denied-ingress-identities": null,
+       "id": 6572220,
+       "l4": {
+        "egress": [],
+        "ingress": []
+       },
+       "policy-enabled": "none",
+       "policy-revision": 1
+      },
+      "spec": {
+       "allowed-egress-identities": [
+        0
+       ],
+       "allowed-ingress-identities": [
+        1,
+        0
+       ],
+       "build": 1,
+       "denied-egress-identities": null,
+       "denied-ingress-identities": null,
+       "id": 6572220,
+       "l4": {
+        "egress": [],
+        "ingress": []
+       },
+       "policy-enabled": "none",
+       "policy-revision": 1
+      }
+     },
+     "realized": {
+      "label-configuration": {},
+      "options": {
+       "ConntrackAccounting": "Disabled",
+       "ConntrackLocal": "Disabled",
+       "Debug": "Disabled",
+       "DebugLB": "Disabled",
+       "DebugPolicy": "Disabled",
+       "DropNotification": "Enabled",
+       "MonitorAggregationLevel": "Medium",
+       "PolicyAccounting": "Enabled",
+       "PolicyAuditMode": "Disabled",
+       "PolicyVerdictNotification": "Enabled",
+       "SourceIPVerification": "Enabled",
+       "TraceNotification": "Enabled"
+      }
+     },
+     "state": "ready"
+    }
+   },
+   {
+    "id": 1346,
+    "spec": {
+     "label-configuration": {},
+     "options": {
+      "ConntrackAccounting": "Disabled",
+      "ConntrackLocal": "Disabled",
+      "Debug": "Disabled",
+      "DebugLB": "Disabled",
+      "DebugPolicy": "Disabled",
+      "DropNotification": "Enabled",
+      "MonitorAggregationLevel": "Medium",
+      "PolicyAccounting": "Enabled",
+      "PolicyAuditMode": "Disabled",
+      "PolicyVerdictNotification": "Enabled",
+      "SourceIPVerification": "Enabled",
+      "TraceNotification": "Enabled"
+     }
+    },
+    "status": {
+     "controllers": [
+      {
+       "configuration": {
+        "error-retry": true,
+        "error-retry-base": "2s"
+       },
+       "name": "endpoint-1346-regeneration-recovery",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "0001-01-01T00:00:00.000Z"
+       },
+       "uuid": "66bcb3b9-9fdd-4188-b437-5d9e2223608c"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "5m0s"
+       },
+       "name": "resolve-identity-1346",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:26:28.084Z",
+        "success-count": 2
+       },
+       "uuid": "ffe4ead9-fc01-4ded-b814-517d122e9e44"
+      },
+      {
+       "configuration": {
+        "error-retry": true
+       },
+       "name": "resolve-labels-kube-system/clustermesh-apiserver-77695dc8d7-ddsjl",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:21:28.082Z",
+        "success-count": 1
+       },
+       "uuid": "710c7eb8-7e78-4611-983d-0d1f2b6f98f9"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "15m0s"
+       },
+       "name": "sync-policymap-1346",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:21:28.116Z",
+        "success-count": 1
+       },
+       "uuid": "bbaf76d1-439a-4434-996e-83e2d54b9069"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "10s"
+       },
+       "name": "sync-to-k8s-ciliumendpoint (1346)",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:28:38.124Z",
+        "success-count": 45
+       },
+       "uuid": "3a0902b2-4304-4833-81c4-e8f4785700c9"
+      }
+     ],
+     "external-identifiers": {
+      "cni-attachment-id": "49cbb4e7051caaca3af78f14ae36103f859bae456abfa6fdaa0b716d26453527:eth0",
+      "container-id": "49cbb4e7051caaca3af78f14ae36103f859bae456abfa6fdaa0b716d26453527",
+      "k8s-namespace": "kube-system",
+      "k8s-pod-name": "clustermesh-apiserver-77695dc8d7-ddsjl",
+      "pod-name": "kube-system/clustermesh-apiserver-77695dc8d7-ddsjl"
+     },
+     "health": {
+      "bpf": "OK",
+      "connected": true,
+      "overallHealth": "OK",
+      "policy": "OK"
+     },
+     "identity": {
+      "id": 6564329,
+      "labels": [
+       "k8s:app.kubernetes.io/name=clustermesh-apiserver",
+       "k8s:app.kubernetes.io/part-of=cilium",
+       "k8s:io.cilium.k8s.namespace.labels.kubernetes.io/metadata.name=kube-system",
+       "k8s:io.cilium.k8s.policy.cluster=cmesh100",
+       "k8s:io.cilium.k8s.policy.serviceaccount=clustermesh-apiserver",
+       "k8s:io.kubernetes.pod.namespace=kube-system",
+       "k8s:k8s-app=clustermesh-apiserver"
+      ]
+     },
+     "labels": {
+      "derived": [
+       "k8s:pod-template-hash=77695dc8d7"
+      ],
+      "realized": {},
+      "security-relevant": [
+       "k8s:app.kubernetes.io/name=clustermesh-apiserver",
+       "k8s:app.kubernetes.io/part-of=cilium",
+       "k8s:io.cilium.k8s.namespace.labels.kubernetes.io/metadata.name=kube-system",
+       "k8s:io.cilium.k8s.policy.cluster=cmesh100",
+       "k8s:io.cilium.k8s.policy.serviceaccount=clustermesh-apiserver",
+       "k8s:io.kubernetes.pod.namespace=kube-system",
+       "k8s:k8s-app=clustermesh-apiserver"
+      ]
+     },
+     "log": [
+      {
+       "code": "OK",
+       "message": "Successfully regenerated endpoint program (Reason: )",
+       "state": "ready",
+       "timestamp": "2024-10-25T10:22:25Z"
+      }
+     ],
+     "namedPorts": [
+      {
+       "name": "apiserv-health",
+       "port": 9880,
+       "protocol": "TCP"
+      },
+      {
+       "name": "apiserv-metrics",
+       "port": 9962,
+       "protocol": "TCP"
+      },
+      {
+       "name": "etcd",
+       "port": 2379,
+       "protocol": "TCP"
+      },
+      {
+       "name": "etcd-metrics",
+       "port": 9963,
+       "protocol": "TCP"
+      },
+      {
+       "name": "kvmesh-health",
+       "port": 9881,
+       "protocol": "TCP"
+      },
+      {
+       "name": "kvmesh-metrics",
+       "port": 9964,
+       "protocol": "TCP"
+      }
+     ],
+     "networking": {
+      "addressing": [
+       {
+        "ipv4": "10.99.0.183",
+        "ipv4-pool-name": "default"
+       }
+      ],
+      "container-interface-name": "eth0",
+      "host-mac": "92:da:b4:38:e3:75",
+      "interface-index": 15,
+      "interface-name": "lxc9a88b3afbaaf",
+      "mac": "fa:e6:60:19:00:2b"
+     },
+     "policy": {
+      "proxy-policy-revision": 1,
+      "proxy-statistics": [],
+      "realized": {
+       "allowed-egress-identities": [
+        0
+       ],
+       "allowed-ingress-identities": [
+        0,
+        1
+       ],
+       "build": 1,
+       "denied-egress-identities": null,
+       "denied-ingress-identities": null,
+       "id": 6564329,
+       "l4": {
+        "egress": [],
+        "ingress": []
+       },
+       "policy-enabled": "none",
+       "policy-revision": 1
+      },
+      "spec": {
+       "allowed-egress-identities": [
+        0
+       ],
+       "allowed-ingress-identities": [
+        1,
+        0
+       ],
+       "build": 1,
+       "denied-egress-identities": null,
+       "denied-ingress-identities": null,
+       "id": 6564329,
+       "l4": {
+        "egress": [],
+        "ingress": []
+       },
+       "policy-enabled": "none",
+       "policy-revision": 1
+      }
+     },
+     "realized": {
+      "label-configuration": {},
+      "options": {
+       "ConntrackAccounting": "Disabled",
+       "ConntrackLocal": "Disabled",
+       "Debug": "Disabled",
+       "DebugLB": "Disabled",
+       "DebugPolicy": "Disabled",
+       "DropNotification": "Enabled",
+       "MonitorAggregationLevel": "Medium",
+       "PolicyAccounting": "Enabled",
+       "PolicyAuditMode": "Disabled",
+       "PolicyVerdictNotification": "Enabled",
+       "SourceIPVerification": "Enabled",
+       "TraceNotification": "Enabled"
+      }
+     },
+     "state": "ready"
+    }
+   },
+   {
+    "id": 1927,
+    "spec": {
+     "label-configuration": {},
+     "options": {
+      "ConntrackAccounting": "Disabled",
+      "ConntrackLocal": "Disabled",
+      "Debug": "Disabled",
+      "DebugLB": "Disabled",
+      "DebugPolicy": "Disabled",
+      "DropNotification": "Enabled",
+      "MonitorAggregationLevel": "Medium",
+      "PolicyAccounting": "Enabled",
+      "PolicyAuditMode": "Disabled",
+      "PolicyVerdictNotification": "Enabled",
+      "SourceIPVerification": "Enabled",
+      "TraceNotification": "Enabled"
+     }
+    },
+    "status": {
+     "controllers": [
+      {
+       "configuration": {
+        "error-retry": true,
+        "error-retry-base": "2s"
+       },
+       "name": "endpoint-1927-regeneration-recovery",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "0001-01-01T00:00:00.000Z"
+       },
+       "uuid": "766a75c8-5ed6-43f1-97a0-27bb2f64a286"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "5m0s"
+       },
+       "name": "resolve-identity-1927",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:27:23.764Z",
+        "success-count": 3
+       },
+       "uuid": "47674053-05f0-46b2-8dc6-f8c6ab9e1905"
+      },
+      {
+       "configuration": {
+        "error-retry": true
+       },
+       "name": "resolve-labels-kube-system/coredns-cc6ccd49c-lcdmg",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:17:23.750Z",
+        "success-count": 1
+       },
+       "uuid": "c488b8d5-3bcc-47ac-a0ca-891b40380e5c"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "15m0s"
+       },
+       "name": "sync-policymap-1927",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:17:25.960Z",
+        "success-count": 1
+       },
+       "uuid": "a5980aa9-72ba-41cc-a330-b01149a0fdeb"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "10s"
+       },
+       "name": "sync-to-k8s-ciliumendpoint (1927)",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:28:33.808Z",
+        "success-count": 69
+       },
+       "uuid": "a467d119-2ae5-4bf9-94ed-7faa28c06bfa"
+      }
+     ],
+     "external-identifiers": {
+      "cni-attachment-id": "f1211de7a9cd2569d0b49f84dd0610b95183f2bbe8c1e09e15e5522c31a47371:eth0",
+      "container-id": "f1211de7a9cd2569d0b49f84dd0610b95183f2bbe8c1e09e15e5522c31a47371",
+      "k8s-namespace": "kube-system",
+      "k8s-pod-name": "coredns-cc6ccd49c-lcdmg",
+      "pod-name": "kube-system/coredns-cc6ccd49c-lcdmg"
+     },
+     "health": {
+      "bpf": "OK",
+      "connected": true,
+      "overallHealth": "OK",
+      "policy": "OK"
+     },
+     "identity": {
+      "id": 6572220,
+      "labels": [
+       "k8s:eks.amazonaws.com/component=coredns",
+       "k8s:io.cilium.k8s.namespace.labels.kubernetes.io/metadata.name=kube-system",
+       "k8s:io.cilium.k8s.policy.cluster=cmesh100",
+       "k8s:io.cilium.k8s.policy.serviceaccount=coredns",
+       "k8s:io.kubernetes.pod.namespace=kube-system",
+       "k8s:k8s-app=kube-dns"
+      ]
+     },
+     "labels": {
+      "derived": [
+       "k8s:pod-template-hash=cc6ccd49c"
+      ],
+      "realized": {},
+      "security-relevant": [
+       "k8s:eks.amazonaws.com/component=coredns",
+       "k8s:io.cilium.k8s.namespace.labels.kubernetes.io/metadata.name=kube-system",
+       "k8s:io.cilium.k8s.policy.cluster=cmesh100",
+       "k8s:io.cilium.k8s.policy.serviceaccount=coredns",
+       "k8s:io.kubernetes.pod.namespace=kube-system",
+       "k8s:k8s-app=kube-dns"
+      ]
+     },
+     "log": [
+      {
+       "code": "OK",
+       "message": "Successfully regenerated endpoint program (Reason: )",
+       "state": "ready",
+       "timestamp": "2024-10-25T10:22:25Z"
+      }
+     ],
+     "namedPorts": [
+      {
+       "name": "dns",
+       "port": 53,
+       "protocol": "UDP"
+      },
+      {
+       "name": "dns-tcp",
+       "port": 53,
+       "protocol": "TCP"
+      },
+      {
+       "name": "metrics",
+       "port": 9153,
+       "protocol": "TCP"
+      }
+     ],
+     "networking": {
+      "addressing": [
+       {
+        "ipv4": "10.99.0.119",
+        "ipv4-pool-name": "default"
+       }
+      ],
+      "container-interface-name": "eth0",
+      "host-mac": "a2:9f:f1:4e:a8:1d",
+      "interface-index": 11,
+      "interface-name": "lxcf60d7877516b",
+      "mac": "02:00:e1:9a:b9:09"
+     },
+     "policy": {
+      "proxy-policy-revision": 1,
+      "proxy-statistics": [],
+      "realized": {
+       "allowed-egress-identities": [
+        0
+       ],
+       "allowed-ingress-identities": [
+        1,
+        0
+       ],
+       "build": 1,
+       "denied-egress-identities": null,
+       "denied-ingress-identities": null,
+       "id": 6572220,
+       "l4": {
+        "egress": [],
+        "ingress": []
+       },
+       "policy-enabled": "none",
+       "policy-revision": 1
+      },
+      "spec": {
+       "allowed-egress-identities": [
+        0
+       ],
+       "allowed-ingress-identities": [
+        0,
+        1
+       ],
+       "build": 1,
+       "denied-egress-identities": null,
+       "denied-ingress-identities": null,
+       "id": 6572220,
+       "l4": {
+        "egress": [],
+        "ingress": []
+       },
+       "policy-enabled": "none",
+       "policy-revision": 1
+      }
+     },
+     "realized": {
+      "label-configuration": {},
+      "options": {
+       "ConntrackAccounting": "Disabled",
+       "ConntrackLocal": "Disabled",
+       "Debug": "Disabled",
+       "DebugLB": "Disabled",
+       "DebugPolicy": "Disabled",
+       "DropNotification": "Enabled",
+       "MonitorAggregationLevel": "Medium",
+       "PolicyAccounting": "Enabled",
+       "PolicyAuditMode": "Disabled",
+       "PolicyVerdictNotification": "Enabled",
+       "SourceIPVerification": "Enabled",
+       "TraceNotification": "Enabled"
+      }
+     },
+     "state": "ready"
+    }
+   },
+   {
+    "id": 3741,
+    "spec": {
+     "label-configuration": {},
+     "options": {
+      "ConntrackAccounting": "Disabled",
+      "ConntrackLocal": "Disabled",
+      "Debug": "Disabled",
+      "DebugLB": "Disabled",
+      "DebugPolicy": "Disabled",
+      "DropNotification": "Enabled",
+      "MonitorAggregationLevel": "Medium",
+      "PolicyAccounting": "Enabled",
+      "PolicyAuditMode": "Disabled",
+      "PolicyVerdictNotification": "Enabled",
+      "SourceIPVerification": "Enabled",
+      "TraceNotification": "Enabled"
+     }
+    },
+    "status": {
+     "controllers": [
+      {
+       "configuration": {
+        "error-retry": true,
+        "error-retry-base": "2s"
+       },
+       "name": "endpoint-3741-regeneration-recovery",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "0001-01-01T00:00:00.000Z"
+       },
+       "uuid": "7357c588-80e5-4a5f-b624-c43d98472053"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "5m0s"
+       },
+       "name": "resolve-identity-3741",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:27:22.906Z",
+        "success-count": 3
+       },
+       "uuid": "14661c1d-9b8b-439f-b333-fc07171382d6"
+      },
+      {
+       "configuration": {
+        "error-retry": true,
+        "interval": "15m0s"
+       },
+       "name": "sync-policymap-3741",
+       "status": {
+        "last-failure-timestamp": "0001-01-01T00:00:00.000Z",
+        "last-success-timestamp": "2024-10-25T10:17:25.896Z",
+        "success-count": 1
+       },
+       "uuid": "84d32d94-2399-4102-b929-700d449849b0"
+      }
+     ],
+     "external-identifiers": {
+      "container-name": "cilium-health",
+      "pod-name": "/"
+     },
+     "health": {
+      "bpf": "OK",
+      "connected": true,
+      "overallHealth": "OK",
+      "policy": "OK"
+     },
+     "identity": {
+      "id": 4,
+      "labels": [
+       "reserved:health"
+      ]
+     },
+     "labels": {
+      "realized": {},
+      "security-relevant": [
+       "reserved:health"
+      ]
+     },
+     "log": [
+      {
+       "code": "OK",
+       "message": "Successfully regenerated endpoint program (Reason: )",
+       "state": "ready",
+       "timestamp": "2024-10-25T10:22:25Z"
+      }
+     ],
+     "networking": {
+      "addressing": [
+       {
+        "ipv4": "10.99.0.170",
+        "ipv4-pool-name": "default"
+       }
+      ],
+      "host-mac": "92:ec:ef:97:f4:bf",
+      "interface-index": 7,
+      "interface-name": "lxc_health",
+      "mac": "22:16:6f:e0:0f:11"
+     },
+     "policy": {
+      "proxy-statistics": [],
+      "realized": {
+       "allowed-egress-identities": [
+        0
+       ],
+       "allowed-ingress-identities": [
+        0,
+        1
+       ],
+       "build": 1,
+       "denied-egress-identities": null,
+       "denied-ingress-identities": null,
+       "id": 4,
+       "l4": {
+        "egress": [],
+        "ingress": []
+       },
+       "policy-enabled": "none",
+       "policy-revision": 1
+      },
+      "spec": {
+       "allowed-egress-identities": [
+        0
+       ],
+       "allowed-ingress-identities": [
+        0,
+        1
+       ],
+       "build": 1,
+       "denied-egress-identities": null,
+       "denied-ingress-identities": null,
+       "id": 4,
+       "l4": {
+        "egress": [],
+        "ingress": []
+       },
+       "policy-enabled": "none",
+       "policy-revision": 1
+      }
+     },
+     "realized": {
+      "label-configuration": {},
+      "options": {
+       "ConntrackAccounting": "Disabled",
+       "ConntrackLocal": "Disabled",
+       "Debug": "Disabled",
+       "DebugLB": "Disabled",
+       "DebugPolicy": "Disabled",
+       "DropNotification": "Enabled",
+       "MonitorAggregationLevel": "Medium",
+       "PolicyAccounting": "Enabled",
+       "PolicyAuditMode": "Disabled",
+       "PolicyVerdictNotification": "Enabled",
+       "SourceIPVerification": "Enabled",
+       "TraceNotification": "Enabled"
+      }
+     },
+     "state": "ready"
+    }
+   }
+  ]
+ },
+ "errors": {
+  "cilium-operator": {
+   "cilium-operator": {
+    "Errors": [],
+    "Warnings": [],
+    "Disabled": false
+   }
+  },
+  "clustermesh-apiserver": {
+   "clustermesh-apiserver": {
+    "Errors": [],
+    "Warnings": [],
+    "Disabled": false
+   }
+  },
+  "hubble-relay": {
+   "hubble-relay": {
+    "Errors": [],
+    "Warnings": [],
+    "Disabled": true
+   }
+  },
+  "hubble-ui": {
+   "hubble-ui": {
+    "Errors": [],
+    "Warnings": [],
+    "Disabled": true
+   }
+  }
+ },
+ "helm_chart_version": "1.16.0"
+}
