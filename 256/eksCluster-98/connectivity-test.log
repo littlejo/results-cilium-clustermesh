@@ -1,0 +1,106 @@
+ℹ️  Monitor aggregation detected, will skip some flow validation steps
+✨ [eksCluster-98] Creating namespace cilium-test-1 for connectivity check...
+✨ [eksCluster-98] Deploying echo-same-node service...
+✨ [eksCluster-98] Deploying DNS test server configmap...
+✨ [eksCluster-98] Deploying same-node deployment...
+✨ [eksCluster-98] Deploying client deployment...
+✨ [eksCluster-98] Deploying client2 deployment...
+⌛ [eksCluster-98] Waiting for deployment cilium-test-1/client to become ready...
+⌛ [eksCluster-98] Waiting for deployment cilium-test-1/client2 to become ready...
+⌛ [eksCluster-98] Waiting for deployment cilium-test-1/echo-same-node to become ready...
+⌛ [eksCluster-98] Waiting for pod cilium-test-1/client-974f6c69d-zw6vx to reach DNS server on cilium-test-1/echo-same-node-86d9cc975c-75khl pod...
+⌛ [eksCluster-98] Waiting for pod cilium-test-1/client2-57cf4468f-zs9rz to reach DNS server on cilium-test-1/echo-same-node-86d9cc975c-75khl pod...
+⌛ [eksCluster-98] Waiting for pod cilium-test-1/client-974f6c69d-zw6vx to reach default/kubernetes service...
+⌛ [eksCluster-98] Waiting for pod cilium-test-1/client2-57cf4468f-zs9rz to reach default/kubernetes service...
+⌛ [eksCluster-98] Waiting for Service cilium-test-1/echo-same-node to become ready...
+⌛ [eksCluster-98] Waiting for Service cilium-test-1/echo-same-node to be synchronized by Cilium pod kube-system/cilium-dxz6d
+⌛ [eksCluster-98] Waiting for NodePort 172.31.139.133:31564 (cilium-test-1/echo-same-node) to become ready...
+ℹ️  Skipping IPCache check
+🔭 Enabling Hubble telescope...
+⚠️  Unable to contact Hubble Relay, disabling Hubble telescope and flow validation: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:4245: connect: connection refused"
+ℹ️  Expose Relay locally with:
+   cilium hubble enable
+   cilium hubble port-forward&
+ℹ️  Cilium version: 1.16.0
+🏃[cilium-test-1] Running 102 tests ...
+[=] [cilium-test-1] Test [no-unexpected-packet-drops] [1/102]
+.
+[=] [cilium-test-1] Test [no-policies] [2/102]
+..................
+[=] [cilium-test-1] Skipping test [no-policies-from-outside] [3/102] (skipped by condition)
+[=] [cilium-test-1] Test [no-policies-extra] [4/102]
+..
+[=] [cilium-test-1] Test [allow-all-except-world] [5/102]
+........
+[=] [cilium-test-1] Test [client-ingress] [6/102]
+..
+[=] [cilium-test-1] Test [client-ingress-knp] [7/102]
+..
+[=] [cilium-test-1] Test [allow-all-with-metrics-check] [8/102]
+..
+[=] [cilium-test-1] Test [all-ingress-deny] [9/102]
+......
+[=] [cilium-test-1] Skipping test [all-ingress-deny-from-outside] [10/102] (skipped by condition)
+[=] [cilium-test-1] Test [all-ingress-deny-knp] [11/102]
+......
+[=] [cilium-test-1] Test [all-egress-deny] [12/102]
+........
+[=] [cilium-test-1] Test [all-egress-deny-knp] [13/102]
+........
+[=] [cilium-test-1] Test [all-entities-deny] [14/102]
+......
+[=] [cilium-test-1] Test [cluster-entity] [15/102]
+..
+[=] [cilium-test-1] Skipping test [cluster-entity-multi-cluster] [16/102] (skipped by condition)
+[=] [cilium-test-1] Test [host-entity-egress] [17/102]
+..
+[=] [cilium-test-1] Test [host-entity-ingress] [18/102]
+
+[=] [cilium-test-1] Test [echo-ingress] [19/102]
+..
+[=] [cilium-test-1] Skipping test [echo-ingress-from-outside] [20/102] (skipped by condition)
+[=] [cilium-test-1] Test [echo-ingress-knp] [21/102]
+..
+[=] [cilium-test-1] Test [client-ingress-icmp] [22/102]
+..
+[=] [cilium-test-1] Test [client-egress] [23/102]
+..
+[=] [cilium-test-1] Test [client-egress-knp] [24/102]
+..
+[=] [cilium-test-1] Test [client-egress-expression] [25/102]
+..
+[=] [cilium-test-1] Test [client-egress-expression-port-range] [26/102]
+..
+[=] [cilium-test-1] Test [client-egress-expression-knp] [27/102]
+..
+[=] [cilium-test-1] Test [client-egress-expression-knp-port-range] [28/102]
+..
+[=] [cilium-test-1] Test [client-with-service-account-egress-to-echo] [29/102]
+..
+[=] [cilium-test-1] Test [client-with-service-account-egress-to-echo-port-range] [30/102]
+..
+[=] [cilium-test-1] Test [client-egress-to-echo-service-account] [31/102]
+..
+[=] [cilium-test-1] Test [client-egress-to-echo-service-account-port-range] [32/102]
+..
+[=] [cilium-test-1] Test [to-entities-world] [33/102]
+......
+[=] [cilium-test-1] Test [to-entities-world-port-range] [34/102]
+......
+[=] [cilium-test-1] Test [to-cidr-external] [35/102]
+....
+[=] [cilium-test-1] Test [to-cidr-external-knp] [36/102]
+....
+[=] [cilium-test-1] Skipping test [from-cidr-host-netns] [37/102] (skipped by condition)
+[=] [cilium-test-1] Test [echo-ingress-from-other-client-deny] [38/102]
+....
+[=] [cilium-test-1] Test [client-ingress-from-other-client-icmp-deny] [39/102]
+....
+[=] [cilium-test-1] Test [client-egress-to-echo-deny] [40/102]
+....
+[=] [cilium-test-1] Test [client-egress-to-echo-deny-port-range] [41/102]
+....
+[=] [cilium-test-1] Test [client-ingress-to-echo-named-port-deny] [42/102]
+..
+[=] [cilium-test-1] Test [client-egress-to-echo-expression-deny] [43/102]
+.

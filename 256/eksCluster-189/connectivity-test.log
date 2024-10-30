@@ -1,0 +1,145 @@
+ℹ️  Monitor aggregation detected, will skip some flow validation steps
+✨ [eksCluster-189] Creating namespace cilium-test-1 for connectivity check...
+✨ [eksCluster-189] Deploying echo-same-node service...
+✨ [eksCluster-189] Deploying DNS test server configmap...
+✨ [eksCluster-189] Deploying same-node deployment...
+✨ [eksCluster-189] Deploying client deployment...
+✨ [eksCluster-189] Deploying client2 deployment...
+⌛ [eksCluster-189] Waiting for deployment cilium-test-1/client to become ready...
+⌛ [eksCluster-189] Waiting for deployment cilium-test-1/client2 to become ready...
+⌛ [eksCluster-189] Waiting for deployment cilium-test-1/echo-same-node to become ready...
+⌛ [eksCluster-189] Waiting for pod cilium-test-1/client-974f6c69d-79l2r to reach DNS server on cilium-test-1/echo-same-node-86d9cc975c-jkfpv pod...
+⌛ [eksCluster-189] Waiting for pod cilium-test-1/client2-57cf4468f-g8gwh to reach DNS server on cilium-test-1/echo-same-node-86d9cc975c-jkfpv pod...
+⌛ [eksCluster-189] Waiting for pod cilium-test-1/client2-57cf4468f-g8gwh to reach default/kubernetes service...
+⌛ [eksCluster-189] Waiting for pod cilium-test-1/client-974f6c69d-79l2r to reach default/kubernetes service...
+⌛ [eksCluster-189] Waiting for Service cilium-test-1/echo-same-node to become ready...
+⌛ [eksCluster-189] Waiting for Service cilium-test-1/echo-same-node to be synchronized by Cilium pod kube-system/cilium-2kdwt
+⌛ [eksCluster-189] Waiting for NodePort 172.31.194.190:32303 (cilium-test-1/echo-same-node) to become ready...
+ℹ️  Skipping IPCache check
+🔭 Enabling Hubble telescope...
+⚠️  Unable to contact Hubble Relay, disabling Hubble telescope and flow validation: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:4245: connect: connection refused"
+ℹ️  Expose Relay locally with:
+   cilium hubble enable
+   cilium hubble port-forward&
+ℹ️  Cilium version: 1.16.0
+🏃[cilium-test-1] Running 102 tests ...
+[=] [cilium-test-1] Test [no-unexpected-packet-drops] [1/102]
+.
+[=] [cilium-test-1] Test [no-policies] [2/102]
+..................
+[=] [cilium-test-1] Skipping test [no-policies-from-outside] [3/102] (skipped by condition)
+[=] [cilium-test-1] Test [no-policies-extra] [4/102]
+..
+[=] [cilium-test-1] Test [allow-all-except-world] [5/102]
+........
+[=] [cilium-test-1] Test [client-ingress] [6/102]
+..
+[=] [cilium-test-1] Test [client-ingress-knp] [7/102]
+..
+[=] [cilium-test-1] Test [allow-all-with-metrics-check] [8/102]
+..
+[=] [cilium-test-1] Test [all-ingress-deny] [9/102]
+......
+[=] [cilium-test-1] Skipping test [all-ingress-deny-from-outside] [10/102] (skipped by condition)
+[=] [cilium-test-1] Test [all-ingress-deny-knp] [11/102]
+......
+[=] [cilium-test-1] Test [all-egress-deny] [12/102]
+........
+[=] [cilium-test-1] Test [all-egress-deny-knp] [13/102]
+........
+[=] [cilium-test-1] Test [all-entities-deny] [14/102]
+......
+[=] [cilium-test-1] Test [cluster-entity] [15/102]
+..
+[=] [cilium-test-1] Skipping test [cluster-entity-multi-cluster] [16/102] (skipped by condition)
+[=] [cilium-test-1] Test [host-entity-egress] [17/102]
+..
+[=] [cilium-test-1] Test [host-entity-ingress] [18/102]
+
+[=] [cilium-test-1] Test [echo-ingress] [19/102]
+..
+[=] [cilium-test-1] Skipping test [echo-ingress-from-outside] [20/102] (skipped by condition)
+[=] [cilium-test-1] Test [echo-ingress-knp] [21/102]
+..
+
+  ℹ️  📜 Applying KubernetesNetworkPolicy 'echo-ingress-from-other-client' to namespace 'cilium-test-1'..
+  [-] Scenario [echo-ingress-knp/pod-to-pod]
+  [.] Action [echo-ingress-knp/pod-to-pod/curl-ipv4-0: cilium-test-1/client-974f6c69d-79l2r (10.189.0.155) -> cilium-test-1/echo-same-node-86d9cc975c-jkfpv (10.189.0.184:8080)]
+  [.] Action [echo-ingress-knp/pod-to-pod/curl-ipv4-1: cilium-test-1/client2-57cf4468f-g8gwh (10.189.0.183) -> cilium-test-1/echo-same-node-86d9cc975c-jkfpv (10.189.0.184:8080)]
+  ℹ️  📜 Deleting K8S NetworkPolicy 'echo-ingress-from-other-client' from namespace 'cilium-test-1'..
+  ℹ️  Cilium agent kube-system/cilium-2kdwt logs since 2024-10-30 10:14:51.156463926 +0000 UTC m=+99.905315611:
+2024-10-30T10:14:51.003363468Z time="2024-10-30T10:14:51Z" level=info msg="Deleted CiliumNetworkPolicy" ciliumNetworkPolicyName=echo-ingress-from-other-client k8sApiVersion= k8sNamespace=cilium-test-1 subsys=policy-k8s-watcher
+2024-10-30T10:14:51.044457142Z time="2024-10-30T10:14:51Z" level=info msg="Program cil_from_container attached to device lxc81ff91de4851 using legacy tc" subsys=datapath-loader
+2024-10-30T10:14:51.045233362Z time="2024-10-30T10:14:51Z" level=info msg="Reloaded endpoint BPF program" ciliumEndpointName=cilium-test-1/echo-same-node-86d9cc975c-jkfpv containerID=423da95df4 containerInterface= datapathPolicyRevision=26 desiredPolicyRevision=27 endpointID=2774 identity=6241207 ipv4=10.189.0.184 ipv6= k8sPodName=cilium-test-1/echo-same-node-86d9cc975c-jkfpv subsys=endpoint
+2024-10-30T10:14:51.310458367Z time="2024-10-30T10:14:51Z" level=info msg="Policy Add Request" ciliumNetworkPolicy="[&{EndpointSelector:{\"matchLabels\":{\"k8s:io.kubernetes.pod.namespace\":\"cilium-test-1\",\"k8s:kind\":\"echo\"}} NodeSelector:{} Ingress:[{IngressCommonRule:{FromEndpoints:[{\"matchLabels\":{\"k8s:io.kubernetes.pod.namespace\":\"cilium-test-1\",\"k8s:other\":\"client\"}}] FromRequires:[] FromCIDR: FromCIDRSet:[] FromEntities:[] FromGroups:[] FromNodes:[] aggregatedSelectors:[]} ToPorts:[] ICMPs:[] Authentication:<nil>}] IngressDeny:[] Egress:[] EgressDeny:[] Labels:[k8s:io.cilium.k8s.policy.derived-from=NetworkPolicy k8s:io.cilium.k8s.policy.name=echo-ingress-from-other-client k8s:io.cilium.k8s.policy.namespace=cilium-test-1 k8s:io.cilium.k8s.policy.uid=296ba4d2-e141-4c2e-9445-c410a95696d0] EnableDefaultDeny:{Ingress:0x4010081d29 Egress:0x4010081d28} Description:}]" policyAddRequest=ead0f9de-0248-49ce-a1a0-745b16a4233d subsys=daemon
+2024-10-30T10:14:51.314410464Z time="2024-10-30T10:14:51Z" level=info msg="Policy imported via API, recalculating..." policyAddRequest=ead0f9de-0248-49ce-a1a0-745b16a4233d policyRevision=28 subsys=daemon
+2024-10-30T10:14:51.314546354Z time="2024-10-30T10:14:51Z" level=info msg="NetworkPolicy successfully added" k8sApiVersion= k8sNetworkPolicyName=echo-ingress-from-other-client subsys=policy-k8s-watcher
+2024-10-30T10:14:51.364866366Z time="2024-10-30T10:14:51Z" level=info msg="Program cil_from_container attached to device lxc81ff91de4851 using legacy tc" subsys=datapath-loader
+2024-10-30T10:14:51.364916621Z time="2024-10-30T10:14:51Z" level=info msg="Reloaded endpoint BPF program" ciliumEndpointName=cilium-test-1/echo-same-node-86d9cc975c-jkfpv containerID=423da95df4 containerInterface= datapathPolicyRevision=27 desiredPolicyRevision=28 endpointID=2774 identity=6241207 ipv4=10.189.0.184 ipv6= k8sPodName=cilium-test-1/echo-same-node-86d9cc975c-jkfpv subsys=endpoint
+2024-10-30T10:14:53.837473218Z time="2024-10-30T10:14:53Z" level=info msg="NetworkPolicy successfully removed" k8sApiVersion= k8sNamespace=cilium-test-1 k8sNetworkPolicyName=echo-ingress-from-other-client labels="[k8s:io.cilium.k8s.policy.derived-from=NetworkPolicy k8s:io.cilium.k8s.policy.name=echo-ingress-from-other-client k8s:io.cilium.k8s.policy.namespace=cilium-test-1 k8s:io.cilium.k8s.policy.uid=296ba4d2-e141-4c2e-9445-c410a95696d0]" subsys=policy-k8s-watcher
+2024-10-30T10:14:53.871026317Z time="2024-10-30T10:14:53Z" level=info msg="Program cil_from_container attached to device lxc81ff91de4851 using legacy tc" subsys=datapath-loader
+2024-10-30T10:14:53.871296859Z time="2024-10-30T10:14:53Z" level=info msg="Reloaded endpoint BPF program" ciliumEndpointName=cilium-test-1/echo-same-node-86d9cc975c-jkfpv containerID=423da95df4 containerInterface= datapathPolicyRevision=28 desiredPolicyRevision=29 endpointID=2774 identity=6241207 ipv4=10.189.0.184 ipv6= k8sPodName=cilium-test-1/echo-same-node-86d9cc975c-jkfpv subsys=endpoint
+2024-10-30T10:14:58.329366545Z time="2024-10-30T10:14:58Z" level=info msg="regenerating all endpoints" reason="one or more identities created or deleted" subsys=endpoint-manager
+2024-10-30T10:14:59.329438645Z time="2024-10-30T10:14:59Z" level=info msg="regenerating all endpoints" reason="one or more identities created or deleted" subsys=endpoint-manager
+2024-10-30T10:15:00.330118239Z time="2024-10-30T10:15:00Z" level=info msg="regenerating all endpoints" reason="one or more identities created or deleted" subsys=endpoint-manager
+2024-10-30T10:15:01.331091349Z time="2024-10-30T10:15:01Z" level=info msg="regenerating all endpoints" reason="one or more identities created or deleted" subsys=endpoint-manager
+2024-10-30T10:15:02.332156115Z time="2024-10-30T10:15:02Z" level=info msg="regenerating all endpoints" reason="one or more identities created or deleted" subsys=endpoint-manager
+2024-10-30T10:15:03.333090678Z time="2024-10-30T10:15:03Z" level=info msg="regenerating all endpoints" reason="one or more identities created or deleted" subsys=endpoint-manager
+
+  ❌ Error finalizing 'echo-ingress-knp': timed out removing policies on Cilium agents: error with exec request (pod=kube-system/cilium-2kdwt, container=cilium-agent): error sending request: Post "https://0D771E0BEFDF3964291FD8B21F573EFC.gr7.eu-west-3.eks.amazonaws.com/api/v1/namespaces/kube-system/pods/cilium-2kdwt/exec?command=cilium&command=policy&command=wait&command=29&command=--max-wait-time&command=15&container=cilium-agent&stderr=true&stdout=true": dial tcp: lookup 0D771E0BEFDF3964291FD8B21F573EFC.gr7.eu-west-3.eks.amazonaws.com on 172.31.0.2:53: read udp 172.31.47.113:53327->172.31.0.2:53: i/o timeout
+[=] [cilium-test-1] Test [client-ingress-icmp] [22/102]
+..
+[=] [cilium-test-1] Test [client-egress] [23/102]
+..
+[=] [cilium-test-1] Test [client-egress-knp] [24/102]
+..
+[=] [cilium-test-1] Test [client-egress-expression] [25/102]
+..
+[=] [cilium-test-1] Test [client-egress-expression-port-range] [26/102]
+..
+[=] [cilium-test-1] Test [client-egress-expression-knp] [27/102]
+..
+[=] [cilium-test-1] Test [client-egress-expression-knp-port-range] [28/102]
+..
+[=] [cilium-test-1] Test [client-with-service-account-egress-to-echo] [29/102]
+..
+[=] [cilium-test-1] Test [client-with-service-account-egress-to-echo-port-range] [30/102]
+..
+[=] [cilium-test-1] Test [client-egress-to-echo-service-account] [31/102]
+..
+[=] [cilium-test-1] Test [client-egress-to-echo-service-account-port-range] [32/102]
+..
+[=] [cilium-test-1] Test [to-entities-world] [33/102]
+......
+[=] [cilium-test-1] Test [to-entities-world-port-range] [34/102]
+......
+[=] [cilium-test-1] Test [to-cidr-external] [35/102]
+....
+[=] [cilium-test-1] Test [to-cidr-external-knp] [36/102]
+....
+[=] [cilium-test-1] Skipping test [from-cidr-host-netns] [37/102] (skipped by condition)
+[=] [cilium-test-1] Test [echo-ingress-from-other-client-deny] [38/102]
+....
+[=] [cilium-test-1] Test [client-ingress-from-other-client-icmp-deny] [39/102]
+....
+[=] [cilium-test-1] Test [client-egress-to-echo-deny] [40/102]
+....
+[=] [cilium-test-1] Test [client-egress-to-echo-deny-port-range] [41/102]
+....
+[=] [cilium-test-1] Test [client-ingress-to-echo-named-port-deny] [42/102]
+..
+[=] [cilium-test-1] Test [client-egress-to-echo-expression-deny] [43/102]
+..
+[=] [cilium-test-1] Test [client-egress-to-echo-expression-deny-port-range] [44/102]
+..
+[=] [cilium-test-1] Test [client-with-service-account-egress-to-echo-deny] [45/102]
+..
+[=] [cilium-test-1] Test [client-with-service-account-egress-to-echo-deny-port-range] [46/102]
+..
+[=] [cilium-test-1] Test [client-egress-to-echo-service-account-deny] [47/102]
+.
+[=] [cilium-test-1] Test [client-egress-to-echo-service-account-deny-port-range] [48/102]
+.
+[=] [cilium-test-1] Test [client-egress-to-cidr-deny] [49/102]
+....
+[=] [cilium-test-1] Test [client-egress-to-cidr-deny-default] [50/102]
